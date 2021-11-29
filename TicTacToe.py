@@ -4,7 +4,7 @@ import time
 
 # Variable globales pour le jeu
 XO = 'x'
-winner = none
+winner = None
 draw = False
 width = 400
 height = 400
@@ -100,7 +100,7 @@ def check_win() :
             height/3 - height/6), (width, (row + 1)*height/3 - height/6), 4)
             break
     # vérification s'il y a un gagnant | colonnes
-    for col in rang (0, 3) :
+    for col in range (0, 3) :
         if (TTT[0][col] == TTT[1][col] == TTT[2][col]) and (TTT[0][col] is not None) :
             winner = TTT[0][col]
             pg.draw.line(screen, (250, 0, 0), ((col + 1)* width/3 - width/6, 0), \
@@ -127,7 +127,7 @@ def draw_status() :
     if winner is None :
         message = "C'est le tour a " + XO.upper()
     else :
-        message = winner.upper() + "a gagné la partie!"
+        message = winner.upper() + " a gagné la partie!"
     if draw :
         message = "Égalité!"
 
