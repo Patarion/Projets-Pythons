@@ -5,7 +5,7 @@ nb_potions = 3
 pv_player = 50
 pv_monster = 50
 random = 0
-
+########################################################################
 def ft_potion(nb_potions) :
     global pv_player, random
     if nb_potions > 0 :
@@ -25,7 +25,8 @@ def ft_potion(nb_potions) :
     else :
         print("Vous n'avez plus de potions... Attaquez bon sang!")
         return 0
-
+    
+#######################################################################
 def ft_attaque() :
     global pv_player, pv_monster, random
     print("Vous tentez d'infligé des dégats à votre adversaire")
@@ -43,7 +44,6 @@ def ft_attaque() :
         else :
             return
 
-
 ############################################################################
 def combat() :
     global CHOIX, nb_potions, pv_player, pv_monster, random
@@ -58,6 +58,7 @@ def combat() :
             nb_potions = ft_potion(nb_potions)
         else :
             print("Mais voyons êtes-vous capable de choisir entre 2 options?!")
+            
 ############################################################################
 print("Un ennemi vous barre la route. Voulez vous vous battre ou fuire ?")
 while bool(CHOIX.isascii()) == True :
